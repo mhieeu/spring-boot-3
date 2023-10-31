@@ -35,7 +35,7 @@ public class DemoSecurityConfig {
                                 .requestMatchers("/systems/**").hasRole("ADMIN")
                                 .anyRequest().authenticated()
         ).formLogin(form ->
-            form.loginPage("/showMyLoginPage")
+            form.loginPage("/login")
                     .loginProcessingUrl("/authenticateTheUser")
                     .permitAll()
         ).logout(LogoutConfigurer::permitAll)
